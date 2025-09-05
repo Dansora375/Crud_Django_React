@@ -112,13 +112,6 @@ npm run dev
 | PATCH | `/api/projects/{id}/` | Actualizar proyecto parcial |
 | DELETE | `/api/projects/{id}/` | Eliminar proyecto |
 
-## 📱 Capturas de Pantalla
-
-### Lista de Proyectos
-![Lista de Proyectos](docs/images/project-list.png)
-
-### Formulario de Creación
-![Formulario](docs/images/project-form.png)
 
 ## 🤝 Contribuciones
 
@@ -148,4 +141,4 @@ Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más det
 
 ---
 
-⭐ **Si este proyecto te ha sido útil, no olvides darle una estrella!**
+
