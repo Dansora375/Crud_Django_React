@@ -1,0 +1,42 @@
+/* Card Base */
+.card {
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Card Variants */
+.card--elevated {
+  background-color: white;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.card--outlined {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+}
+
+.card--filled {
+  background-color: #f9fafb;
+  border: 1px solid #f3f4f6;
+}
+
+/* Hoverable State */
+.card--hoverable:hover {
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.card--elevated.card--hoverable:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.card--outlined.card--hoverable:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+.card--filled.card--hoverable:hover {
+  background-color: #f3f4f6;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}

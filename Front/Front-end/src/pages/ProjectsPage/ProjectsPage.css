@@ -1,0 +1,24 @@
+/* Projects Page */
+.projects-page {
+  min-height: 100vh;
+  background-color: #f9fafb;
+}
+
+.projects-page__main {
+  min-height: calc(100vh - 160px); /* Adjust based on header height */
+}
+
+.projects-page__form-container {
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 400px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .projects-page__form-container {
+    padding: 1rem;
+  }
+}

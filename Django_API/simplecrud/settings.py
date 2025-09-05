@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'projects',
     'rest_framework',
-    'corsheaders'
+    'corsheaders',
+    'coreapi'
 ]
 
 MIDDLEWARE = [
@@ -78,8 +79,17 @@ WSGI_APPLICATION = 'simplecrud.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'ENGINE': 'django.db.backends.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'DJANGO_BD',   # Nombre de tu base de datos en MariaDB
+        'USER': 'root',          # Usuario de MariaDB
+        'PASSWORD': 'admin',     # Contraseña del usuario
+        'HOST': 'localhost',           # O la IP/host de tu servidor
+        'PORT': '3306',                # Puerto por defecto de MariaDB/MySQL
+        'OPTIONS': {
+            'charset': 'utf8mb4',      # Para soporte completo de caracteres
+        }
     }
 }
 
@@ -124,3 +134,16 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# CORS autorization
+CORS_ALLOWED_ORIGINS = [
+
+    "http://localhost:5173",
+    # "https://yourfrontenddomain.com",
+]
+
+#para documentacion
+REST_FRAMEWORK = {
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema'
+}

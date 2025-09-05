@@ -1,0 +1,144 @@
+/* Loading Base */
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.loading--fullscreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 9999;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.loading-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Spinner Animation */
+.loading-spinner {
+  border: 2px solid #f3f4f6;
+  border-top: 2px solid #3b82f6;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.loading--small .loading-spinner {
+  width: 1rem;
+  height: 1rem;
+}
+
+.loading--medium .loading-spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.loading--large .loading-spinner {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Dots Animation */
+.loading-dots {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.loading-dot {
+  background-color: #3b82f6;
+  border-radius: 50%;
+  animation: bounce 1.4s ease-in-out infinite both;
+}
+
+.loading--small .loading-dot {
+  width: 0.375rem;
+  height: 0.375rem;
+}
+
+.loading--medium .loading-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+
+.loading--large .loading-dot {
+  width: 0.625rem;
+  height: 0.625rem;
+}
+
+.loading-dot:nth-child(1) {
+  animation-delay: -0.32s;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: -0.16s;
+}
+
+.loading-dot:nth-child(3) {
+  animation-delay: 0s;
+}
+
+/* Pulse Animation */
+.loading-pulse {
+  background-color: #3b82f6;
+  border-radius: 50%;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.loading--small .loading-pulse {
+  width: 1rem;
+  height: 1rem;
+}
+
+.loading--medium .loading-pulse {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.loading--large .loading-pulse {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Animations */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
